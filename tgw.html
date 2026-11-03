@@ -307,6 +307,15 @@
     font-size: 12px; font-weight: 500;
     color: var(--ink-soft);
   }
+  a.res-tag {
+    text-decoration: none;
+    transition: background 0.22s, border-color 0.22s, color 0.22s;
+  }
+  a.res-tag:hover {
+    background: rgba(255,255,255,0.88);
+    border-color: rgba(59,130,246,0.28);
+    color: var(--accent);
+  }
   /* 快速部署指南 */
   .guide-list {
     display: flex; flex-direction: column; gap: 16px;
@@ -783,33 +792,34 @@
         <h3>安装包与资源</h3>
         <p>按平台选择安装包，配套 Helm Chart、监控大盘与迁移指南一应俱全。</p>
         <div class="res-list">
-          <a class="res-row" href="#">
+          <a class="res-row" href="tgw_1.0.0_linux_amd64.zip" download>
             <span class="res-icon">🐧</span>
             <div class="res-info">
               <div class="res-name">Linux x86_64</div>
-              <div class="res-file">tgw_1.0.0_linux_amd64.tar.gz</div>
+              <div class="res-file">tgw_1.0.0_linux_amd64.zip</div>
             </div>
             <span class="res-size">17.8 MB</span>
-            <a href="tgw_1.0.0_linux_amd64.tar.gz"><span class="res-dl">下载</span></a>
+            <span class="res-dl">下载</span>
           </a>
-          <a class="res-row" href="#">
+          <a class="res-row" href="tgw_1.0.0_windows_amd64.zip" download>
             <span class="res-icon"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M2.5 5.75 11 4.6v8.2H2.5zM12.1 4.45 21.5 3v9.8h-9.4zM2.5 13.9H11v8.2l-8.5-1.15zM12.1 13.9h9.4V23l-9.4-1.45z"/></svg></span>
             <div class="res-info">
               <div class="res-name">Windows x64</div>
               <div class="res-file">tgw_1.0.0_windows_amd64.zip</div>
             </div>
             <span class="res-size">20.1 MB</span>
-            <a href="tgw_1.0.0_windows_amd64.zip"><span class="res-dl">下载</span></a>
+            <span class="res-dl">下载</span>
           </a>
         </div>
         <div class="res-sub">配套资源</div>
         <div class="res-tags">
           <span class="res-tag">OpenAPI 示例</span>
+          <a class="res-tag" href="SHA256SUMS.txt" download>SHA256 校验文件</a>
         </div>
         <div class="get-actions">
-          <a href="#" class="get-download-btn">
+          <a href="SHA256SUMS.txt" class="get-download-btn" download>
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-            全部版本与校验文件
+            下载 SHA256 校验文件
           </a>
         </div>
       </div>
@@ -870,7 +880,7 @@
               <div class="guide-body">
                 <h4>部署</h4>
                 <p>生成配置文件，并按需注册为 Windows 服务。</p>
-                <span class="guide-cmd">编辑 config.jso</span>
+                <span class="guide-cmd">编辑 config.json</span>
               </div>
             </div>
             <div class="guide-item">
